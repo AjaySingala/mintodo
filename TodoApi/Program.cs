@@ -17,7 +17,7 @@ builder.Services.AddCors(options =>
                         policy =>
                         {
                             policy.WithOrigins("http://localhost:4200",
-                                "https://ajs-todoapp-ng.azurewebsites.net/")
+                                "https://ajs-todoapp-ng.azurewebsites.net")
                                 .AllowAnyHeader()
                                 .AllowAnyMethod();
                         });
