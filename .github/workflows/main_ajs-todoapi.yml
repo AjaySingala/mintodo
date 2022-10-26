@@ -45,7 +45,7 @@ jobs:
           
       - name: Install SonarCloud scanner
         run: |
-          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+          dotnet tool install --global dotnet-sonarscanner
           
       - name: Build and Analyze
         env:
