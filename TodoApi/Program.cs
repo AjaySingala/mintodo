@@ -16,7 +16,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: TodoOrigins,
                         policy =>
                         {
-                            policy.WithOrigins("http://localhost:4200")
+                            policy.WithOrigins("http://localhost:4200",
+                                "https://ajs-todoapp-ng.azurewebsites.net/")
                                 .AllowAnyHeader()
                                 .AllowAnyMethod();
                         });
@@ -37,6 +38,7 @@ app.MapGet("/", () => "Hello world!");
 
 // For TodoList.
 // https://localhost:7038/todoitems
+// Azure: https://ajs-todoapi.azurewebsites.net/todoitems
 app.MapGet("/todoitems", async (TodoDb db) =>
     await db.Todos.ToListAsync()
 );
