@@ -34,7 +34,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", () => "Hello world!");
+app.MapGet("/", () => "Hello world! Welcome to .NET Core Minimal API");
 
 // For TodoList.
 // https://localhost:7038/todoitems
